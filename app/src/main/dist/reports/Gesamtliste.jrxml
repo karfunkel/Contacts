@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Gesamtliste" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" uuid="5e2051e0-ac0b-4cb8-8eab-4fa6e7762424">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Riehle Contacts CSV"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="default" isDefault="true" fontSize="10"/>
+	<queryString language="csv">
+		<![CDATA[]]>
+	</queryString>
+	<field name="Additional Name" class="java.lang.String"/>
+	<field name="Address - City" class="java.lang.String"/>
+	<field name="Address - Country" class="java.lang.String"/>
+	<field name="Address - Extended Address" class="java.lang.String"/>
+	<field name="Address - Formatted" class="java.lang.String"/>
+	<field name="Address - PO Box" class="java.lang.String"/>
+	<field name="Address - Postal Code" class="java.lang.Integer"/>
+	<field name="Address - Region" class="java.lang.String"/>
+	<field name="Address - Shortlist" class="java.lang.String"/>
+	<field name="Address - Street" class="java.lang.String"/>
+	<field name="Address - Type" class="java.lang.String"/>
+	<field name="Address 1 - City" class="java.lang.String"/>
+	<field name="Address 1 - Country" class="java.lang.String"/>
+	<field name="Address 1 - Extended Address" class="java.lang.String"/>
+	<field name="Address 1 - Formatted" class="java.lang.String"/>
+	<field name="Address 1 - PO Box" class="java.lang.String"/>
+	<field name="Address 1 - Postal Code" class="java.lang.Integer"/>
+	<field name="Address 1 - Region" class="java.lang.String"/>
+	<field name="Address 1 - Street" class="java.lang.String"/>
+	<field name="Address 1 - Type" class="java.lang.String"/>
+	<field name="Address 2 - City" class="java.lang.String"/>
+	<field name="Address 2 - Country" class="java.lang.String"/>
+	<field name="Address 2 - Extended Address" class="java.lang.String"/>
+	<field name="Address 2 - Formatted" class="java.lang.String"/>
+	<field name="Address 2 - PO Box" class="java.lang.String"/>
+	<field name="Address 2 - Postal Code" class="java.lang.String"/>
+	<field name="Address 2 - Region" class="java.lang.String"/>
+	<field name="Address 2 - Street" class="java.lang.String"/>
+	<field name="Address 2 - Type" class="java.lang.String"/>
+	<field name="Address 3 - City" class="java.lang.String"/>
+	<field name="Address 3 - Country" class="java.lang.String"/>
+	<field name="Address 3 - Extended Address" class="java.lang.String"/>
+	<field name="Address 3 - Formatted" class="java.lang.String"/>
+	<field name="Address 3 - PO Box" class="java.lang.String"/>
+	<field name="Address 3 - Postal Code" class="java.lang.Integer"/>
+	<field name="Address 3 - Region" class="java.lang.String"/>
+	<field name="Address 3 - Street" class="java.lang.String"/>
+	<field name="Address 3 - Type" class="java.lang.String"/>
+	<field name="Address 4 - City" class="java.lang.String"/>
+	<field name="Address 4 - Country" class="java.lang.String"/>
+	<field name="Address 4 - Extended Address" class="java.lang.String"/>
+	<field name="Address 4 - Formatted" class="java.lang.String"/>
+	<field name="Address 4 - PO Box" class="java.lang.String"/>
+	<field name="Address 4 - Postal Code" class="java.lang.String"/>
+	<field name="Address 4 - Region" class="java.lang.String"/>
+	<field name="Address 4 - Street" class="java.lang.String"/>
+	<field name="Address 4 - Type" class="java.lang.String"/>
+	<field name="Address 5 - City" class="java.lang.String"/>
+	<field name="Address 5 - Country" class="java.lang.String"/>
+	<field name="Address 5 - Extended Address" class="java.lang.String"/>
+	<field name="Address 5 - Formatted" class="java.lang.String"/>
+	<field name="Address 5 - PO Box" class="java.lang.String"/>
+	<field name="Address 5 - Postal Code" class="java.lang.String"/>
+	<field name="Address 5 - Region" class="java.lang.String"/>
+	<field name="Address 5 - Street" class="java.lang.String"/>
+	<field name="Address 5 - Type" class="java.lang.String"/>
+	<field name="Birthday" class="java.lang.String"/>
+	<field name="C_addressbookId" class="java.lang.String"/>
+	<field name="C_ehash" class="java.lang.String"/>
+	<field name="C_nation" class="java.lang.String"/>
+	<field name="C_salutation" class="java.lang.String"/>
+	<field name="C_type" class="java.lang.String"/>
+	<field name="C_note" class="java.lang.String"/>
+	<field name="E-mail 1 - Type" class="java.lang.String"/>
+	<field name="E-mail 1 - Value" class="java.lang.String"/>
+	<field name="E-mail 2 - Type" class="java.lang.String"/>
+	<field name="E-mail 2 - Value" class="java.lang.String"/>
+	<field name="E-mail 3 - Type" class="java.lang.String"/>
+	<field name="E-mail 3 - Value" class="java.lang.String"/>
+	<field name="E-mail 4 - Type" class="java.lang.String"/>
+	<field name="E-mail 4 - Value" class="java.lang.String"/>
+	<field name="E-mail 5 - Type" class="java.lang.String"/>
+	<field name="E-mail 5 - Value" class="java.lang.String"/>
+	<field name="Family Name" class="java.lang.String"/>
+	<field name="Full Name" class="java.lang.String"/>
+	<field name="Given Name" class="java.lang.String"/>
+	<field name="Group Membership" class="java.lang.String"/>
+	<field name="Name" class="java.lang.String"/>
+	<field name="Name Prefix" class="java.lang.String"/>
+	<field name="Name Suffix" class="java.lang.String"/>
+	<field name="Notes" class="java.lang.String"/>
+	<field name="Organization 1 - Department" class="java.lang.String"/>
+	<field name="Organization 1 - Job Description" class="java.lang.String"/>
+	<field name="Organization 1 - Location" class="java.lang.String"/>
+	<field name="Organization 1 - Name" class="java.lang.String"/>
+	<field name="Organization 1 - Symbol" class="java.lang.String"/>
+	<field name="Organization 1 - Title" class="java.lang.String"/>
+	<field name="Organization 1 - Type" class="java.lang.String"/>
+	<field name="Organization 1 - Yomi Name" class="java.lang.String"/>
+	<field name="Phone 1 - Type" class="java.lang.String"/>
+	<field name="Phone 1 - Value" class="java.lang.String"/>
+	<field name="Phone 2 - Type" class="java.lang.String"/>
+	<field name="Phone 2 - Value" class="java.lang.String"/>
+	<field name="Phone 3 - Type" class="java.lang.String"/>
+	<field name="Phone 3 - Value" class="java.lang.String"/>
+	<field name="Phone 4 - Type" class="java.lang.String"/>
+	<field name="Phone 4 - Value" class="java.lang.String"/>
+	<field name="Phone 5 - Type" class="java.lang.String"/>
+	<field name="Phone 5 - Value" class="java.lang.String"/>
+	<field name="Salutation" class="java.lang.String"/>
+	<field name="Website 1 - Type" class="java.lang.String"/>
+	<field name="Website 1 - Value" class="java.lang.String"/>
+	<field name="Website 2 - Type" class="java.lang.String"/>
+	<field name="Website 2 - Value" class="java.lang.String"/>
+	<field name="Website 3 - Type" class="java.lang.String"/>
+	<field name="Website 3 - Value" class="java.lang.String"/>
+	<field name="Website 4 - Type" class="java.lang.String"/>
+	<field name="Website 4 - Value" class="java.lang.String"/>
+	<field name="Website 5 - Type" class="java.lang.String"/>
+	<field name="Website 5 - Value" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="319" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="3" width="572" height="1" uuid="c29731dc-33c8-466e-a52d-28c1c81b4d55"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="default" x="0" y="5" width="572" height="18" uuid="c6d4a7e4-be82-4070-a4b1-ab70dc3e5585">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Full Name} + $F{Birthday}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="22" width="372" height="12" uuid="581cf6bb-ffc4-4c7d-86fc-05072b4d8484">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[[$F{Organization 1 - Title}, $F{Organization 1 - Department}].findAll().join(' ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="35" width="572" height="12" isRemoveLineWhenBlank="true" uuid="ae82309a-c618-40a5-ae1f-5cc93aa7800a"/>
+				<textFieldExpression><![CDATA[[($F{Address 1 - Type} - '*')?.trim(), $F{Address 1 - Formatted}?.readLines().findAll()?.join(', ')].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="48" width="572" height="12" isRemoveLineWhenBlank="true" uuid="e6714801-26ee-4b9a-8d23-84124dcb6602"/>
+				<textFieldExpression><![CDATA[[($F{Address 2 - Type} - '*')?.trim(), $F{Address 2 - Formatted}?.readLines().findAll()?.join(', ')].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="61" width="572" height="12" isRemoveLineWhenBlank="true" uuid="cfb5ff85-12c3-4898-bb4d-b4ebfd7ba4a3"/>
+				<textFieldExpression><![CDATA[[($F{Address 3 - Type} - '*')?.trim(), $F{Address 3 - Formatted}?.readLines().findAll()?.join(', ')].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="74" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c1e4a931-de37-4dad-9d65-f7e150b3f29b"/>
+				<textFieldExpression><![CDATA[[($F{Address 4 - Type} - '*')?.trim(), $F{Address 4 - Formatted}?.readLines().findAll()?.join(', ')].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="87" width="572" height="12" isRemoveLineWhenBlank="true" uuid="3e8491a1-ae51-412f-b390-a9f46cc93d06"/>
+				<textFieldExpression><![CDATA[[($F{Address 5 - Type} - '*')?.trim(), $F{Address 5 - Formatted}?.readLines().findAll()?.join(', ')].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="100" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ada1"/>
+				<textFieldExpression><![CDATA[[($F{Phone 1 - Type} - '*')?.trim(), $F{Phone 1 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="113" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ada2"/>
+				<textFieldExpression><![CDATA[[($F{Phone 2 - Type} - '*')?.trim(), $F{Phone 2 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="126" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ada3"/>
+				<textFieldExpression><![CDATA[[($F{Phone 3 - Type} - '*')?.trim(), $F{Phone 3 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="139" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ada4"/>
+				<textFieldExpression><![CDATA[[($F{Phone 4 - Type} - '*')?.trim(), $F{Phone 4 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="152" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ada5"/>
+				<textFieldExpression><![CDATA[[($F{Phone 5 - Type} - '*')?.trim(), $F{Phone 5 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="230" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ad11"/>
+				<textFieldExpression><![CDATA[[($F{Website 1 - Type} - '*')?.trim(), $F{Website 1 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="243" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ad13"/>
+				<textFieldExpression><![CDATA[[($F{Website 2 - Type} - '*')?.trim(), $F{Website 2 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="256" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ad14"/>
+				<textFieldExpression><![CDATA[[($F{Website 3 - Type} - '*')?.trim(), $F{Website 3 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="269" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ad15"/>
+				<textFieldExpression><![CDATA[[($F{Website 4 - Type} - '*')?.trim(), $F{Website 4 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="282" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ad16"/>
+				<textFieldExpression><![CDATA[[($F{Website 5 - Type} - '*')?.trim(), $F{Website 5 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="165" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ad31"/>
+				<textFieldExpression><![CDATA[[($F{E-mail 1 - Type} - '*')?.trim(), $F{E-mail 1 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="178" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ad32"/>
+				<textFieldExpression><![CDATA[[($F{E-mail 2 - Type} - '*')?.trim(), $F{E-mail 2 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="191" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ad33"/>
+				<textFieldExpression><![CDATA[[($F{E-mail 3 - Type} - '*')?.trim(), $F{E-mail 3 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="204" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ad34"/>
+				<textFieldExpression><![CDATA[[($F{E-mail 4 - Type} - '*')?.trim(), $F{E-mail 4 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="217" width="572" height="12" isRemoveLineWhenBlank="true" uuid="c66a179a-9b9f-4512-8d11-e52b4980ad35"/>
+				<textFieldExpression><![CDATA[[($F{E-mail 5 - Type} - '*')?.trim(), $F{E-mail 5 - Value}].findAll().join(': ')]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="295" width="573" height="12" isRemoveLineWhenBlank="true" uuid="dda79b88-ad42-4fca-bcdf-186cb57ecb23"/>
+				<textFieldExpression><![CDATA[$F{Notes}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="307" width="573" height="12" isRemoveLineWhenBlank="true" uuid="dda79b88-ad42-4fca-bcdf-186cb57ecb24"/>
+				<textFieldExpression><![CDATA[$F{C_note}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement style="default" x="452" y="0" width="80" height="14" uuid="da736e54-7e65-4cb4-b1fe-729f419aff2c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Seite "+$V{PAGE_NUMBER}+" von"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="default" x="532" y="0" width="40" height="14" uuid="31462b8e-d871-47db-b291-ff3c92304dc8"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Briefumschlag" language="groovy" pageWidth="623" pageHeight="311" orientation="Landscape" columnWidth="256" leftMargin="56" rightMargin="311" topMargin="141" bottomMargin="42" whenResourceMissingType="Empty" uuid="fb6970d6-f811-408a-a2b3-fe641535e7a7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Riehle Contacts CSV"/>
+	<style name="default" isDefault="true" fontSize="10"/>
+	<queryString language="csv">
+		<![CDATA[]]>
+	</queryString>
+	<field name="Additional Name" class="java.lang.String"/>
+	<field name="Address - City" class="java.lang.String"/>
+	<field name="Address - Country" class="java.lang.String"/>
+	<field name="Address - Extended Address" class="java.lang.String"/>
+	<field name="Address - Formatted" class="java.lang.String"/>
+	<field name="Address - PO Box" class="java.lang.String"/>
+	<field name="Address - Postal Code" class="java.lang.Integer"/>
+	<field name="Address - Region" class="java.lang.String"/>
+	<field name="Address - Shortlist" class="java.lang.String"/>
+	<field name="Address - Mainlist" class="java.lang.String"/>
+	<field name="Address - Street" class="java.lang.String"/>
+	<field name="Address - Type" class="java.lang.String"/>
+	<field name="Address 1 - City" class="java.lang.String"/>
+	<field name="Address 1 - Country" class="java.lang.String"/>
+	<field name="Address 1 - Extended Address" class="java.lang.String"/>
+	<field name="Address 1 - Formatted" class="java.lang.String"/>
+	<field name="Address 1 - PO Box" class="java.lang.String"/>
+	<field name="Address 1 - Postal Code" class="java.lang.Integer"/>
+	<field name="Address 1 - Region" class="java.lang.String"/>
+	<field name="Address 1 - Street" class="java.lang.String"/>
+	<field name="Address 1 - Type" class="java.lang.String"/>
+	<field name="Address 2 - City" class="java.lang.String"/>
+	<field name="Address 2 - Country" class="java.lang.String"/>
+	<field name="Address 2 - Extended Address" class="java.lang.String"/>
+	<field name="Address 2 - Formatted" class="java.lang.String"/>
+	<field name="Address 2 - PO Box" class="java.lang.String"/>
+	<field name="Address 2 - Postal Code" class="java.lang.String"/>
+	<field name="Address 2 - Region" class="java.lang.String"/>
+	<field name="Address 2 - Street" class="java.lang.String"/>
+	<field name="Address 2 - Type" class="java.lang.String"/>
+	<field name="Address 3 - City" class="java.lang.String"/>
+	<field name="Address 3 - Country" class="java.lang.String"/>
+	<field name="Address 3 - Extended Address" class="java.lang.String"/>
+	<field name="Address 3 - Formatted" class="java.lang.String"/>
+	<field name="Address 3 - PO Box" class="java.lang.String"/>
+	<field name="Address 3 - Postal Code" class="java.lang.Integer"/>
+	<field name="Address 3 - Region" class="java.lang.String"/>
+	<field name="Address 3 - Street" class="java.lang.String"/>
+	<field name="Address 3 - Type" class="java.lang.String"/>
+	<field name="Address 4 - City" class="java.lang.String"/>
+	<field name="Address 4 - Country" class="java.lang.String"/>
+	<field name="Address 4 - Extended Address" class="java.lang.String"/>
+	<field name="Address 4 - Formatted" class="java.lang.String"/>
+	<field name="Address 4 - PO Box" class="java.lang.String"/>
+	<field name="Address 4 - Postal Code" class="java.lang.String"/>
+	<field name="Address 4 - Region" class="java.lang.String"/>
+	<field name="Address 4 - Street" class="java.lang.String"/>
+	<field name="Address 4 - Type" class="java.lang.String"/>
+	<field name="Address 5 - City" class="java.lang.String"/>
+	<field name="Address 5 - Country" class="java.lang.String"/>
+	<field name="Address 5 - Extended Address" class="java.lang.String"/>
+	<field name="Address 5 - Formatted" class="java.lang.String"/>
+	<field name="Address 5 - PO Box" class="java.lang.String"/>
+	<field name="Address 5 - Postal Code" class="java.lang.String"/>
+	<field name="Address 5 - Region" class="java.lang.String"/>
+	<field name="Address 5 - Street" class="java.lang.String"/>
+	<field name="Address 5 - Type" class="java.lang.String"/>
+	<field name="Birthday" class="java.sql.Date"/>
+	<field name="C_addressbookId" class="java.lang.String"/>
+	<field name="C_ehash" class="java.lang.String"/>
+	<field name="C_nation" class="java.lang.String"/>
+	<field name="C_salutation" class="java.lang.String"/>
+	<field name="C_type" class="java.lang.String"/>
+	<field name="E-mail 1 - Type" class="java.lang.String"/>
+	<field name="E-mail 1 - Value" class="java.lang.String"/>
+	<field name="E-mail 2 - Type" class="java.lang.String"/>
+	<field name="E-mail 2 - Value" class="java.lang.String"/>
+	<field name="E-mail 3 - Type" class="java.lang.String"/>
+	<field name="E-mail 3 - Value" class="java.lang.String"/>
+	<field name="E-mail 4 - Type" class="java.lang.String"/>
+	<field name="E-mail 4 - Value" class="java.lang.String"/>
+	<field name="E-mail 5 - Type" class="java.lang.String"/>
+	<field name="E-mail 5 - Value" class="java.lang.String"/>
+	<field name="Family Name" class="java.lang.String"/>
+	<field name="Full Name" class="java.lang.String"/>
+	<field name="Given Name" class="java.lang.String"/>
+	<field name="Group Membership" class="java.lang.String"/>
+	<field name="Name" class="java.lang.String"/>
+	<field name="Name Prefix" class="java.lang.String"/>
+	<field name="Name Suffix" class="java.lang.String"/>
+	<field name="Notes" class="java.lang.String"/>
+	<field name="Organization 1 - Department" class="java.lang.String"/>
+	<field name="Organization 1 - Job Description" class="java.lang.String"/>
+	<field name="Organization 1 - Location" class="java.lang.String"/>
+	<field name="Organization 1 - Name" class="java.lang.String"/>
+	<field name="Organization 1 - Symbol" class="java.lang.String"/>
+	<field name="Organization 1 - Title" class="java.lang.String"/>
+	<field name="Organization 1 - Type" class="java.lang.String"/>
+	<field name="Organization 1 - Yomi Name" class="java.lang.String"/>
+	<field name="Phone 1 - Type" class="java.lang.String"/>
+	<field name="Phone 1 - Value" class="java.lang.String"/>
+	<field name="Phone 2 - Type" class="java.lang.String"/>
+	<field name="Phone 2 - Value" class="java.lang.String"/>
+	<field name="Phone 3 - Type" class="java.lang.String"/>
+	<field name="Phone 3 - Value" class="java.lang.String"/>
+	<field name="Phone 4 - Type" class="java.lang.String"/>
+	<field name="Phone 4 - Value" class="java.lang.String"/>
+	<field name="Phone 5 - Type" class="java.lang.String"/>
+	<field name="Phone 5 - Value" class="java.lang.String"/>
+	<field name="Salutation" class="java.lang.String"/>
+	<field name="Website 1 - Type" class="java.lang.String"/>
+	<field name="Website 1 - Value" class="java.lang.String"/>
+	<field name="Website 2 - Type" class="java.lang.String"/>
+	<field name="Website 2 - Value" class="java.lang.String"/>
+	<field name="Website 3 - Type" class="java.lang.String"/>
+	<field name="Website 3 - Value" class="java.lang.String"/>
+	<field name="Website 4 - Type" class="java.lang.String"/>
+	<field name="Website 4 - Value" class="java.lang.String"/>
+	<field name="Website 5 - Type" class="java.lang.String"/>
+	<field name="Website 5 - Value" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="127" splitType="Prevent">
+			<textField isBlankWhenNull="true">
+				<reportElement style="default" x="260" y="4" width="292" height="123" uuid="f17deb69-bdf3-4bee-9968-4416021ca797">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="Calibri" size="13"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="10.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Salutation} + "<br>" + $F{Full Name}   +"<br>" + $F{Address - Formatted}.replaceAll("\n", "<br>")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

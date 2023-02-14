@@ -1,0 +1,150 @@
+report = "Etiketten.jrxml"
+name = "Etiketten"
+transform {
+    customFields = { Map<String, String> row ->
+        forEach(row, /Custom Field (\d*) - Type/) {
+            String type = row.remove("Custom Field $it - Type".toString())
+            String value = row.remove("Custom Field $it - Value".toString())
+            if (type)
+                row."C_$type" = value
+        }
+    }
+
+    fixName = { Map<String, String> row ->
+        String prefix = row."Name Prefix"?.trim()
+        String name = row."Name"?.trim()
+        if (prefix && name.startsWith(prefix))
+            row."Name" = name[(prefix.size())..-1]?.trim()
+    }
+
+    fullName = { Map<String, String> row ->
+        String name = [row."Name Prefix"?.trim(), row."Name"?.trim(), row."Name Suffix"?.trim()].join(' ')
+        if (row."Organization 1 - Type")
+            name += "\n" << row."Organization 1 - Type"?.trim()
+        row."Full Name" = name.trim()
+    }
+
+    addressFormatted = { Map<String, String> row ->
+        forEach(row, /Address (\d*) - Type/) { int i ->
+            def country = fixCountry(row?."Address $i - Country"?.trim())
+            if (country && country == 'DE') {
+                String address = ""
+                address += fixStreet(row."Address $i - Street"?.trim(), row."Address $i - Formatted"?.trim(), country) << "\n"
+                address += "\n"
+                address += row."Address $i - Postal Code"?.trim() << " " << row."Address $i - City"?.trim() << "\n"
+                row."Address $i - Formatted" = address.trim()
+            }
+        }
+    }
+
+    labels = { Map<String, String> row -> row."Group Membership" = (row."Group Membership".split(' ::: ') - '* myContacts').join(", ") }
+    email = { Map<String, String> row -> fixColumnAmount(row, "E-mail", ["Type", "Value"], 5) }
+    phone = { Map<String, String> row -> fixColumnAmount(row, "Phone", ["Type", "Value"], 5) }
+    website = { Map<String, String> row -> fixColumnAmount(row, "Website", ["Type", "Value"], 5) }
+    address = { Map<String, String> row -> fixColumnAmount(row, "Address", ["Type", "Formatted", "Street", "City", "PO Box", "Region", "Postal Code", "Country", "Extended Address"], 5) }
+    organization = { Map<String, String> row -> fixColumnAmount(row, "Organization", ["Type", "Name", "Yomi Name", "Title", "Department", "Symbol", "Location", "Job Description"], 1) }
+
+    salutation = { Map<String, String> row ->
+        row.Salutation = row.find { k, v -> k.trim().toLowerCase() == "c_salutation" }?.value ?: ''
+    }
+
+    defaultAddress = { Map<String, String> row ->
+        def idx = row.inject(0) { value, entry ->
+            def m = (entry.key =~ /Address (\d*) - Formatted/)
+            if (!m) return value
+            return Math.max(value, row."Group Membership".contains('Adresse ' + m[0][1]) ? m[0][1] as int : 0)
+        } ?: 1
+
+        List keys = [] + row.keySet()
+        keys.each { key ->
+            def prefix = "Address " + idx
+            if (key.startsWith(prefix)) {
+                String newKey = key.replace(prefix, "Address")
+                row[newKey] = row[key]
+            }
+        }
+    }
+
+    addressShortlist = { Map<String, String> row ->
+        def adrs = []
+        forEach(row, /Address (\d*) - Type/) { int i ->
+            String type = row."Address $i - Type" ?: ''
+            String nation = fixCountry(row."Address $i - Country")
+            String city = row."Address $i - City"
+            adrs << [type + ":", nation, city].findAll { it }.join(" ")
+        }
+        row."Address - Shortlist" = adrs.join(" | ")
+    }
+
+    reduceColumns = { Map<String, String> row ->
+        List<String> keys = [] + row.keySet()
+        keys.each { key ->
+            switch (key) {
+                case { it.startsWith('E-mail') }:
+                case { it.startsWith('Phone') }:
+                case { it.startsWith('Website') }:
+                case { it.startsWith('Address') }:
+                case { it.startsWith('Organization') }:
+                case { it.startsWith('C_') }:
+                case ["Salutation",
+                      "Full Name",
+                      "Name",
+                      "Given Name",
+                      "Additional Name",
+                      "Family Name",
+                      "Name Suffix",
+                      "Name Prefix",
+                      "Birthday",
+                      "Notes",
+                      "Group Membership"]:
+                    break
+                default:
+                    row.remove(key)
+            }
+        }
+    }
+}
+
+sort = { List<Map<String, String>> rows ->
+    rows.sort { a, b -> a."Family Name" <=> b."Family Name" ?: a."Given Name" <=> b."Given Name" }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------- //
+
+private String fixCountry(String country) {
+    return ['germany': 'DE', 'deutschland': 'DE', 'deu': 'DE', 'united kingdom': 'UK', 'switzerland': 'CH', 'gb': 'UK', 'france': 'FR'][country?.toLowerCase()] ?: country
+}
+
+private String fixStreet(String street, String formatted, String country) {
+    if (country != 'DE') return street
+    return street[0].isNumber() ? formatted?.readLines()?.first() ?: street : street
+}
+
+private int max(Map<String, String> row, String pattern) {
+    return row.keySet().inject(0) { i, v ->
+        def m = (v =~ pattern)
+        return m ? [i, m[0][1] as int].max() : i
+    }
+}
+
+private void forEach(Map<String, String> row, String pattern, Closure action) {
+    (1..max(row, pattern)).each { if (it) action(it) }
+}
+
+private fixColumnAmount(Map<String, String> row, String prefix, List<String> parts, int target) {
+    int max = max(row, prefix + / (\d*) - Type/)
+    if (target < max) {
+        ((target + 1)..max).each {
+            parts.each { String p ->
+                row.remove(prefix + " $it - " + p)
+            }
+        }
+    } else if (target > max) {
+        ((max + 1)..target).each {
+            parts.each { String p ->
+                row[prefix + " $it - " + p] = ''
+            }
+        }
+    }
+}
+

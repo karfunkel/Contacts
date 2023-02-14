@@ -1,0 +1,46 @@
+plugins {
+    // Apply the groovy Plugin to add support for Groovy.
+    id 'groovy'
+}
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    constraints {
+        implementation 'org.codehaus.groovy:groovy-all:3.0.8'
+    }
+
+    // Use the latest Groovy version for building this library
+    implementation 'org.codehaus.groovy:groovy-all'
+
+    implementation 'info.picocli:picocli:4.6.2'
+    implementation 'info.picocli:picocli-groovy:4.6.2'
+    implementation 'com.google.guava:guava:31.0.1-jre'
+
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+    implementation 'org.slf4j:jcl-over-slf4j:1.7.32'
+    implementation 'ch.qos.logback:logback-core:1.2.10'
+    implementation 'ch.qos.logback:logback-classic:1.2.10'
+
+    // Use the awesome Spock testing and specification framework even with Java
+    testImplementation('org.spockframework:spock-core:2.0-groovy-3.0')
+    testImplementation 'junit:junit:4.13.2'
+}
+
+configurations.all {
+    resolutionStrategy { force 'org.codehaus.groovy:groovy-all:3.0.8' }
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}
+
+

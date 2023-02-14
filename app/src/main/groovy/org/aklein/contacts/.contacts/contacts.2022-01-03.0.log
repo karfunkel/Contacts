@@ -1,0 +1,1 @@
+19:46:57.164 [main] INFO  org.aklein.contacts.api.Main - Contacts starting with options: input = null, adapter = org.aklein.contacts.adapter.CSV, reportDir = /Users/alexanderklein/Projects/IdeaProjects/Riehle/Contacts/app/src/main/dist/reports, language = de, preferences = /org/aklein/contacts

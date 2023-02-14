@@ -1,0 +1,10 @@
+plugins {
+    id 'org.aklein.contacts.groovy-library-conventions'
+}
+
+archivesBaseName = "contacts-api"
+
+dependencies {
+    api 'com.xlson.groovycsv:groovycsv:1.3'
+    //api project(':list')
+}
